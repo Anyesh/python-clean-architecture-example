@@ -16,7 +16,7 @@ class ReadPost:
         except NotExistedDataError:
             return None
         else:
-            output_dto = ReadPostOutputDto(
+            return ReadPostOutputDto(
                 id=post.id,
                 author=post.author,
                 category=post.category,
@@ -24,4 +24,3 @@ class ReadPost:
                 created_at=post.created_at,
                 updated_at=post.updated_at,
             )
-            return output_dto
